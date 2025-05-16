@@ -1,0 +1,82 @@
+.in-admin-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.in-bookings-table {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.in-bookings-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.in-bookings-table th, 
+.in-bookings-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.in-bookings-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.in-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.in-status.in-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.in-status.in-confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.in-status.in-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.in-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.in-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+}
+
+.in-btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.in-btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.in-btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
