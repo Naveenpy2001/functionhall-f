@@ -21,7 +21,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchBookedDates = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/bookings/dates/');
+        const response = await axios.get('https://function-b-2.onrender.com/api/bookings/dates/');
         const dates = response.data.map(dateStr => new Date(dateStr));
         setBookedDates(dates);
       } catch (error) {

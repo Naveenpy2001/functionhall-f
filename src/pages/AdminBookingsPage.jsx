@@ -26,7 +26,7 @@ const AdminBookingsPage = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/bookings/');
+      const response = await axios.get('https://function-b-2.onrender.com/api/bookings/');
       setBookings(response.data);
       setLoading(false);
       console.log('data : ',response.data);
@@ -56,13 +56,13 @@ const AdminBookingsPage = () => {
 
   const handleStatusChange = async (id, status) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/bookings/${id}/`, { status });
+      await axios.patch(`https://function-b-2.onrender.com/api/bookings/${id}/`, { status });
       
       setBookings(bookings.map(booking => 
         booking.id === id ? { ...booking, status } : booking
       ));
       
-      await axios.post(`http://127.0.0.1:8000/api/bookings/${id}/send-confirmation/`, { status });
+      await axios.post(`https://function-b-2.onrender.com/api/bookings/${id}/send-confirmation/`, { status });
       
       console.error(`Booking ${status} and confirmation email sent!`);
     } catch (error) {
@@ -193,7 +193,7 @@ const AdminBookingsPage = () => {
                       )}
                       <button 
                         onClick={() => {
-                          axios.post(`http://127.0.0.1:8000/api/bookings/${booking.id}/send-email/`, {
+                          axios.post(`https://function-b-2.onrender.com/api/bookings/${booking.id}/send-email/`, {
                             subject: 'Regarding your booking',
                             message: 'Your custom message here'
                           });
