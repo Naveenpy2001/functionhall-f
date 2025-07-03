@@ -34,7 +34,7 @@ const BookingComponent = ({ selectedDateRange, onClose, onBookingSuccess }) => {
         status: 'pending' // Add status field
       };      
       
-      const response = await axios.post('https://function-b-2.onrender.com/api/bookings/', bookingData);
+      const response = await axios.post('http://127.0.0.1:8000/api/bookings/', bookingData);
       setLoading(false)
       setBookingSuccess(true);
       onBookingSuccess(selectedDateRange);
